@@ -19,6 +19,7 @@ document.write('<br>' + "Cумма всех чисел между А и В = " +
 
 var odd = a;
 do { 
-    document.write(odd + '<br>');
+    if (odd % 2 == 1){
+    document.write(odd + '<br>');}
     odd++; }
 while (odd < B); 
