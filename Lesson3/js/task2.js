@@ -12,18 +12,15 @@ var element = prompt("Введите элемент массива");
 
 for (i = 0; i < cars.length; i++) {
     if (element == cars[i]) {
-        // alert("Есть совпадение!");
         var newElement = prompt("Введите новый элемент массива");
-        cars.splice(++i, 0, newElement);
-        document.write("Новый массив: " + cars + '<br>');
+        cars.splice(i + 1, 0, newElement);
+        console.log("Новый массив: " + cars + '<br>');
         break;
-    } else {
+    } else if (i == cars.length - 1) {
         cars.push(element);
-        document.write("Новый массив :" + cars + '<br>');
-        // alert("Совпадений нет");
-        var element2 = prompt("Введите еще один элемент массива");
+        var element2 = prompt("Введите новый элемент массива");
         cars.push(element2);
-        document.write("Новый массив :" + cars + '<br>');
+        console.log("Новый массив :" + cars + '<br>');
         break;
     }
 }
